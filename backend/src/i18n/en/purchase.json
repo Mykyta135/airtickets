@@ -1,0 +1,30 @@
+{
+  "success": {
+    "reserved": "Flight reserved",
+    "passengers_added": "Passengers added successfully",
+    "seats_assigned": "Seats assigned",
+    "booking_confirmed": "Booking confirmed and tickets issued",
+    "payment_success": "Payment successful"
+
+  },
+  "errors": {
+    "passenger_not_in_booking": "Passenger {{email}} not found in this booking",
+    "seat_not_reserved": "Seat {{seatNumber}} is not reserved",
+    "max_passengers": "Cannot reserve more than {{max}} seats",
+    "flight_not_found": "Flight not found",
+    "seats_unavailable": "One or more seats are unavailable",
+    "booking_not_found": "Booking not found",
+    "access_denied": "You do not have access to this booking",
+    "invalid_state": "Booking is no longer in pending state",
+    "duplicate_passengers": "Duplicate passengers in request",
+    "passenger_not_found": "Passenger with email {{email}} does not exist",
+    "already_linked": "Passenger {{email}} is already linked to this booking",
+    "seat_already_assigned": "Seat {{seatId}} is already assigned to another passenger",
+    "terms_not_accepted": "Terms must be accepted",
+    "no_passengers": "No passengers added to booking",
+    "unassigned_seats": "Not all seats are assigned to passengers"
+  },
+  "validation": {
+    "min_query_length": "Search query must be at least {{min}} characters"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "success": {
+    "reserved": "Рейс заброньовано",
+    "passengers_added": "Пасажирів успішно додано",
+    "seats_assigned": "Місця призначено",
+    "booking_confirmed": "Бронювання підтверджено та квитки випущено",
+    "payment_success": "Оплата успішна"
+  },
+  "errors": {
+    "max_passengers": "Не можна забронювати більше {{max}} місць",
+    "flight_not_found": "Рейс не знайдено",
+    "seats_unavailable": "Одне або кілька місць недоступні",
+    "booking_not_found": "Бронювання не знайдено",
+    "access_denied": "У вас немає доступу до цього бронювання",
+    "invalid_state": "Бронювання більше не в очікуванні",
+    "duplicate_passengers": "Дубльовані пасажири у запиті",
+    "passenger_not_found": "Пасажира з email {{email}} не знайдено",
+    "already_linked": "Пасажир {{email}} вже прив'язаний до цього бронювання",
+    "seat_already_assigned": "Місце {{seatId}} вже призначено іншому пасажиру",
+    "terms_not_accepted": "Умови мають бути прийняті",
+    "no_passengers": "До бронювання не додано жодного пасажира",
+    "unassigned_seats": "Не всі місця призначені пасажирам",
+    "passenger_not_in_booking": "Пасажира {{email}} не знайдено в цьому бронюванні",
+    "seat_not_reserved": "Місце {{seatNumber}} не заброньоване"
+  },
+  "validation": {
+    "min_query_length": "Пошуковий запит має містити щонайменше {{min}} символів"
+  }
+}

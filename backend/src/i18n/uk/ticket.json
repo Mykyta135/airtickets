@@ -1,0 +1,15 @@
+{
+  "errors": {
+    "not_found": "Квиток не знайдено",
+    "booking_not_found": "Бронювання не знайдено"
+  },
+  "pdf": {
+    "title": "Авіаквиток",
+    "passenger_name": "Ім'я",
+    "passenger_email": "Електронна пошта",
+    "flight_number": "Рейс",
+    "seat_number": "Місце",
+    "booking_ref": "Номер бронювання",
+    "issued_at": "Дата видачі"
+  }
+}

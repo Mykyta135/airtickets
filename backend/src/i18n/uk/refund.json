@@ -1,0 +1,22 @@
+{
+  "success": {
+    "created": "Запит на повернення коштів створено",
+    "updated": "Статус повернення оновлено",
+    "deleted": "Запит на повернення видалено"
+  },
+  "errors": {
+    "ticket_not_found": "Квиток з ID {{ticketId}} не знайдено",
+    "refund_exists": "Повернення для квитка {{ticketId}} вже існує",
+    "already_refunded": "Квиток {{ticketId}} вже повернуто",
+    "invalid_status": "Не можна повернути квиток зі статусом {{status}}",
+    "no_payment": "Не можна повернути квиток без завершеного платежу",
+    "refund_not_found": "Повернення з ID {{id}} не знайдено",
+    "ticket_refund_not_found": "Повернення для квитка {{ticketId}} не знайдено",
+    "delete_not_allowed": "Не можна видалити повернення зі статусом {{status}}"
+  },
+  "statuses": {
+    "issued": "Випущено",
+    "cancelled": "Скасовано",
+    "refunded": "Повернено"
+  }
+}

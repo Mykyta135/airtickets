@@ -1,0 +1,22 @@
+{
+  "success": {
+    "created": "Refund request created successfully",
+    "updated": "Refund status updated",
+    "deleted": "Refund request deleted"
+  },
+  "errors": {
+    "ticket_not_found": "Ticket with ID {{ticketId}} not found",
+    "refund_exists": "Refund for ticket {{ticketId}} already exists",
+    "already_refunded": "Ticket {{ticketId}} has already been refunded",
+    "invalid_status": "Cannot refund ticket with status {{status}}",
+    "no_payment": "Cannot refund ticket without a completed payment",
+    "refund_not_found": "Refund with ID {{id}} not found",
+    "ticket_refund_not_found": "Refund for ticket {{ticketId}} not found",
+    "delete_not_allowed": "Cannot delete refund with status {{status}}"
+  },
+  "statuses": {
+    "issued": "Issued",
+    "cancelled": "Cancelled",
+    "refunded": "Refunded"
+  }
+}

@@ -1,0 +1,283 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Airline {
+  id              String    @id @default(cuid())
+  name            String    @unique
+  code            String    @unique
+  country         String
+  logoUrl         String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  
+  // Relationships
+  flights         Flight[]
+}
+
+model Airport {
+  id              String    @id @default(cuid())
+  name            String    
+  code            String    @unique
+  city            String
+  country         String
+  timezone        String
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  
+  // Relationships
+  departureFlights Flight[] @relation("DepartureAirport")
+  arrivalFlights   Flight[] @relation("ArrivalAirport")
+}
+
+model Flight {
+  id              String    @id @default(cuid())
+  flightNumber    String
+  departureTime   DateTime
+  arrivalTime     DateTime
+  baseFare        Decimal   @db.Decimal(10, 2)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  
+  // Foreign keys
+  airlineId       String
+  departureAirportId String
+  arrivalAirportId   String
+  
+  // Relationships
+  airline         Airline   @relation(fields: [airlineId], references: [id])
+  departureAirport Airport  @relation("DepartureAirport", fields: [departureAirportId], references: [id])
+  arrivalAirport   Airport  @relation("ArrivalAirport", fields: [arrivalAirportId], references: [id])
+  flightSeats      FlightSeat[]
+  bookings         Booking[]
+  
+  @@unique([flightNumber, departureTime])
+  @@index([departureTime])
+  @@index([arrivalTime])
+  @@index([departureAirportId])
+  @@index([arrivalAirportId])
+}
+
+model FlightSeat {
+  id              String    @id @default(cuid())
+  seatNumber      String
+  seatClass       SeatClass
+  price           Decimal   @db.Decimal(10, 2)
+  isAvailable     Boolean   @default(true)
+  
+  // Foreign keys
+  flightId        String
+  
+  // Relationships
+  flight          Flight    @relation(fields: [flightId], references: [id])
+  tickets         Ticket[]
+
+  seatReservations SeatReservation[]
+  @@unique([flightId, seatNumber])
+}
+
+model Passenger {
+  id              String    @id @default(cuid())
+  firstName       String
+  lastName        String
+  email           String    @unique
+  phone           String?
+  passportNumber  String?
+  dateOfBirth     DateTime?
+  nationality     String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  
+  seatReservations SeatReservation[]
+  // Relationships
+  user            User?     @relation(fields: [userId], references: [id])
+  userId          String?   @unique
+  bookings        BookingPassenger[]
+  tickets         Ticket[]
+}
+
+model User {
+  id              String    @id @default(cuid())
+  email           String    @unique
+  passwordHash    String
+  isVerified      Boolean   @default(false)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  verificationExpiry DateTime?
+  verificationToken String?
+ 
+  passenger       Passenger?
+  bookings        Booking[]
+}
+
+model Booking {
+  id              String    @id @default(cuid())
+  bookingReference String   @unique
+  bookingDate     DateTime  @default(now())
+  status          BookingStatus @default(PENDING)
+  totalAmount     Decimal   @db.Decimal(10, 2)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  
+  // Foreign keys
+  userId          String
+  flightId        String
+  
+  // Relationships
+  user            User      @relation(fields: [userId], references: [id])
+  flight          Flight    @relation(fields: [flightId], references: [id])
+  payments        Payment[]
+  passengers      BookingPassenger[]
+  tickets         Ticket[]
+
+   // Add this field to store reserved seat IDs temporarily
+  reservedSeatIds String[]  @default([])
+  
+  // Add this relation
+  seatReservations SeatReservation[]
+  
+  @@index([bookingReference])
+  @@index([userId])
+  @@index([bookingDate])
+}
+
+model BookingPassenger {
+  id              String    @id @default(cuid())
+  isMainContact   Boolean   @default(false)
+  
+  // Foreign keys
+  bookingId       String
+  passengerId     String
+  
+  // Relationships
+  booking         Booking   @relation(fields: [bookingId], references: [id])
+  passenger       Passenger @relation(fields: [passengerId], references: [id])
+  
+  @@unique([bookingId, passengerId])
+}
+
+model Ticket {
+  id              String    @id @default(cuid())
+  ticketNumber    String    
+  issueDate       DateTime  @default(now())
+  status          TicketStatus @default(ISSUED)
+  boardingPass    String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  
+  // Foreign keys
+  bookingId       String
+  passengerId     String
+  flightSeatId    String
+  
+  // Relationships
+  booking         Booking   @relation(fields: [bookingId], references: [id])
+  passenger       Passenger @relation(fields: [passengerId], references: [id])
+  flightSeat      FlightSeat @relation(fields: [flightSeatId], references: [id])
+  refund          Refund?
+  
+  @@index([ticketNumber])
+}
+
+model Payment {
+  id              String    @id @default(cuid())
+  amount          Decimal   @db.Decimal(10, 2)
+  paymentMethod   PaymentMethod
+  paymentDate     DateTime  @default(now())
+  transactionId   String?   @unique
+  status          PaymentStatus @default(PENDING)
+  
+  // Foreign keys
+  bookingId       String
+  
+  // Relationships
+  booking         Booking   @relation(fields: [bookingId], references: [id])
+  
+  @@index([transactionId])
+}
+
+model Refund {
+  id              String    @id @default(cuid())
+  amount          Decimal   @db.Decimal(10, 2)
+  reason          String?
+  status          RefundStatus @default(PENDING)
+  requestDate     DateTime  @default(now())
+  processedDate   DateTime?
+  
+  // Foreign keys
+  ticketId        String    @unique
+  
+  // Relationships
+  ticket          Ticket    @relation(fields: [ticketId], references: [id])
+}
+
+model SeatReservation {
+  id              String    @id @default(cuid())
+  createdAt       DateTime  @default(now())
+  
+  // Foreign keys
+  bookingId       String
+  flightSeatId    String
+  passengerId     String?   // Optional until assigned
+  
+  // Relationships
+  booking         Booking   @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  flightSeat      FlightSeat @relation(fields: [flightSeatId], references: [id])
+  passenger       Passenger? @relation(fields: [passengerId], references: [id])
+  
+  @@unique([bookingId, flightSeatId])
+  @@index([bookingId])
+  @@index([flightSeatId])
+  @@index([passengerId])
+}
+
+
+enum SeatClass {
+  ECONOMY
+  PREMIUM_ECONOMY
+  BUSINESS
+  FIRST
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+enum TicketStatus {
+  ISSUED
+  CHECKED_IN
+  BOARDED
+  COMPLETED
+  CANCELLED
+  REFUNDED
+}
+
+enum PaymentMethod {
+  CREDIT_CARD
+  DEBIT_CARD
+  PAYPAL
+  BANK_TRANSFER
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+enum RefundStatus {
+  PENDING
+  APPROVED
+  PROCESSED
+  REJECTED
+}

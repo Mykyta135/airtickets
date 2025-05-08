@@ -1,0 +1,8 @@
+{
+  "errors": {
+    "invalid_query": "Search query must be at least 2 characters",
+    "not_found": "Flight not found",
+    "airline_not_found": "Airline not found",
+    "airport_not_found": "Airport not found"
+  }
+}

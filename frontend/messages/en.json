@@ -1,0 +1,545 @@
+{
+  "ConfirmationStep": {
+    "title": "Booking Confirmed!",
+    "subtitle": "Your booking has been successfully completed and tickets have been issued.",
+    "cardTitle": "Booking Details",
+    "cardDescription": "Reference number and passenger information",
+    "bookingReferenceLabel": "Booking Reference",
+    "bookingReferenceNote": "Use this reference for check-in and customer support",
+    "passengerInfoTitle": "Passenger Information",
+    "eticketIssued": "E-Ticket issued",
+    "viewTickets": "View My Tickets",
+    "returnHome": "Return to Home",
+    "supportMessage": "Need assistance? Contact our customer service at"
+  },
+  "PassengersStep": {
+    "title": "Passenger Details",
+    "subtitle": "Please provide details for all passengers. Make sure passport information matches travel documents.",
+    "passenger": "Passenger",
+    "seat": "Seat",
+    "class": "Class",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "passportNumber": "Passport Number",
+    "dateOfBirth": "Date of Birth",
+    "nationality": "Nationality",
+    "seatAssignment": "Seat Assignment",
+    "selectSeat": "Select seat",
+    "continue": "Continue to Review",
+    "processing": "Processing..."
+  },
+  "PassengersStepform": {
+    "errors": {
+      "firstName": "First name is required",
+      "lastName": "Last name is required",
+      "email": "Valid email is required",
+      "passportNumber": "Valid passport number is required",
+      "dateOfBirth": "Valid date is required",
+      "nationality": "Nationality is required"
+    }
+  },
+  "PaymentStep": {
+    "title": "Payment",
+    "subtitle": "Choose your preferred payment method",
+    "amountDue": "Amount Due",
+    "cardNumber": "Card Number",
+    "expiryDate": "Expiry Date",
+    "cvv": "CVV",
+    "paymentMethod": "Payment Method",
+    "paypal": "PayPal",
+    "payNow": "Pay Now",
+    "processing": "Processing Payment...",
+    "secureDescription": "All payment information is encrypted and secure. Your card will be charged immediately after confirmation."
+  },
+  "PaymentStepform": {
+    "errors": {
+      "paymentMethod": "Please select a payment method",
+      "cardNumber": "Card number must be 16 digits",
+      "expiryDate": "Expiry must be in format MM/YY",
+      "cvv": "CVV must be 3 or 4 digits"
+    }
+  },
+  "ReviewBookingStep": {
+    "reviewBooking": "Review Your Booking",
+    "reviewFlightDetails": "Please review your flight details and passenger information",
+    "flightDetails": "Flight Details",
+    "departure": "Departure",
+    "arrival": "Arrival",
+    "directFlight": "Direct",
+    "passengerInformation": "Passenger Information",
+    "passengerName": "Passenger: {firstName} {lastName}",
+    "passengerEmail": "Email: {email}",
+    "passportNumber": "Passport: {passportNumber}",
+    "seatNumber": "Seat: {seatNumber}",
+    "seatClass": "Class: {seatClass}",
+    "seatPrice": "Price: ${price}",
+    "paymentSummary": "Payment Summary",
+    "seatPriceSummary": "Seat {seatNumber} ({seatClass}) - ${price}",
+    "total": "Total",
+    "termsAndConditions": "I agree to the terms and conditions of carriage",
+    "confirmBooking": "Confirm Booking",
+    "processingBooking": "Processing..."
+  },
+  "SeatSelection":{
+    "title": "Select Your Seats",
+    "subtitle": "Choose up to 9 seats for your journey",
+    "totalPrice": "Total Price",
+    "available": "Available",
+    "selected": "Selected",
+    "classTitle": "{class} Class",
+    "classSummary": "{available} of {total} seats available",
+    "priceRange": "Price range: {range}",
+    "front": "Front of Aircraft",
+    "cockpit": "Cockpit",
+    "letter": "Seat Letter",
+    "emergencyExit": "Emergency Exit",
+    "lavatory": "Lavatory/Galley",
+    "exitHint": "Emergency Exit Row - Extra legroom",
+    "rear": "Rear of Aircraft",
+    "galley": "Galley",
+    "selectedSeats": {
+      "title": "Selected Seats",
+      "description": "You've selected {count} seat(s)"
+    }
+  },
+  "Header":{
+    "home": "Home",
+    "travelInfo": "Travel Info",
+    "baggage": {
+      "title": "Baggage",
+      "description": "Baggage allowance and special requirements"
+    },
+    "checkIn": {
+      "title": "Check-in",
+      "description": "How to check-in for your flight"
+    },
+    "takeRefund": "Refund",
+    "myAccount": "My Account",
+    "profile": "Profile",
+    "myTickets": "My Tickets",
+    "logOut": "Log out",
+    "logIn": "Log in",
+    "signUp": "Sign up"
+  },
+  
+    "myTickets": {
+      "title": "My Tickets history",
+      "noTickets": "You don't have any tickets yet",
+      "bookFlight": "Book a Flight",
+      "loading": "Loading your tickets...",
+      "all": "All Tickets",
+      "noUpcoming": "No upcoming tickets found",
+      "noPast": "No past tickets found",
+      "ref": "Ref",
+      "total": "Total",
+      "passenger": "passenger",
+      "passenger_plural": "passengers",
+      "requestRefund": "Request Refund"
+    },
+    "status": {
+      "confirmed": "Confirmed",
+      "cancelled": "Cancelled",
+      "pending": "Pending"
+    },
+    "common": {
+      "retry": "Try Again",
+      "unknown": "Unknown"
+    },
+    "purchase": {
+      "backToFlights": "← Back to Flights",
+      "loading": "Loading flight details...",
+      "title": "Book Flight",
+      "dateRange": "{departure} → {arrival}"
+    },
+    "stepper": {
+      "seats": "1. Seats",
+      "passengers": "2. Passengers",
+      "review": "3. Review",
+      "payment": "4. Payment",
+      "confirmation": "5. Confirmed"
+    },
+    "errors": {
+      "loadFlight": "Could not load flight details. Please try again.",
+      "noSeatsSelected": "Please select at least one seat to continue",
+      "reservationFailed": "Could not reserve seats. Please try again.",
+      "passengerFailed": "Failed to add passenger information",
+      "confirmationFailed": "Could not confirm your booking",
+      "paymentFailed": "Could not process your payment"
+    },
+    "buttons": {
+      "back": "Back",
+      "continuePassengers": "Continue to Passengers",
+      "viewTickets": "View My Tickets",
+      "reserving": "Reserving..."
+    },
+
+    "baggage": {
+      "title": "Baggage information",
+      "subtitle": "Everything you need to know about baggage allowances, rates, and special items.",
+      "tabs": {
+        "allowance": "Baggage allowance",
+        "special": "Special items",
+        "restrictions": "Restrictions"
+      },
+      "allowance": {
+        "title": "Baggage allowance by class",
+        "description": "Each fare class has different baggage allowances.",
+        "important": {
+          "title": "Inportant",
+          "description": "Size restrictions apply: hand luggage should not exceed 56×36×23 cm, and personal belongings should be placed under the seat in front of you."
+        },
+        "table": {
+          "class": "class",
+          "carry_on": "carry-on baggage",
+          "checked": "Checked baggage",
+          "weight": "Max weight (per bag)",
+          "economy": "Economy",
+          "premium": "Premium economy",
+          "business": "Business",
+          "first": "First"
+        },
+
+        "lang": {
+          "title": "Important",
+          "description": "Size restrictions apply: hand luggage must not exceed 56×36×23 cm and personal items must fit under the seat in front of you."
+        },
+        "fees": {
+          "title": "Additional baggage fees",
+          "extra_bag": "Extra bag",
+          "short": "Short flight",
+          "medium": "Medium flight",
+          "long": "Long flight",
+          "first": "First extra bag",
+          "second": "Second extra bag",
+          "each": "Each subsequent bag",
+          "overweight": "Overweight fee (23-32 kg)"
+        }
+      },
+      "special": {
+        "title": "Special Items",
+        "description": "Special baggage rules",
+        "accordion": {
+          "children": {
+            "title": "Strollers and car seats",
+            "text1": "One stroller and one car seat per child - free of charge",
+            "text2": "They can be returned at check-in or at the boarding gate. Car seats can be taken on board if a seat is purchased and the seat is certified."
+          },
+          "sports": {
+            "title": "Sports equipment",
+            "text": "Most sports equipment can be transported as checked baggage, subject to the following:",
+            "table": {
+              "item": "Item",
+              "fee": "Special Fee",
+              "notes": "Notes",
+              "golf": "Golf equipment",
+              "golf_notes": "One bag with clubs, balls and shoes.",
+              "ski": "Ski/snowboard equipment.",
+              "ski_notes": "Pair of skis/snowboards, boots, poles.",
+              "bike": "Bicycles",
+              "bike_notes": "Must be packed in a special box.",
+              "surf": "Surfboards",
+              "surf_notes": "Maximum 2 boards per bag"
+            }
+          },
+          "instruments": {
+             "title": "Musical instruments",
+            "text": "Musical instruments can be transported as follows:",
+            "small": "Small instruments (violins, wind instruments) - in hand luggage.",
+            "medium": "Medium (guitars, saxophones) - may require a seat purchase.",
+            "large": "Large (cellos, double basses) - as cargo or checked baggage",
+            "note": "All instruments must be in a hard case."
+          },
+          "medical": {
+            "title": "Medical equipment",
+            "text": "Medical equipment allowed free of charge in excess of baggage allowance:",
+            "list": {
+              "mobility": "Mobility aids (wheelchairs, walkers)",
+              "cpap": "CPAP machines",
+              "oxygen": "Portable oxygen concentrators (with appropriate documentation)"
+            },
+          
+            "notice": "Notify customer service at least 48 hours before departure"
+          }
+        
+        }
+      },
+      "restrictions": {
+       
+        "title": "Baggage Restrictions",
+        "description": "Items that are prohibited or restricted for transportation.",
+        "notice": {
+          "title": "Security Announcement",
+          "description": "For security reasons, certain items are prohibited. Violation of the rules may result in confiscation, delays, or fines."
+        },
+        "liquids": {
+          "title": "Rule of liquids (3-1-1)”",
+          "text": "The 3-1-1 rule applies to carry-on baggage:",
+          "list": [
+            "3.4 ounces (100 ml): maximum volume of one container",
+            "1 liter: all containers must be placed in one transparent 1 liter bag.",
+            "1 bag: one bag of liquids per passenger"
+          ],
+          "exceptions": "Exceptions: medicines, baby food/milk are allowed in volumes over 100 ml and do not require to be bagged, but must be declared at the time of inspection."
+        },
+        "prohibited": {
+          "title": "Prohibited Items",
+          "text": "The following items are prohibited in any baggage:",
+          "list": [
+            "Explosives, fireworks",
+            "Flammable substances (gasoline, lighter fluid)",
+            "Toxic substances",
+            "Radioactive materials",
+            "Strong acids and corrosive substances",
+            "Self-defense means (gas canisters, stun guns)"
+          ]
+        },
+        "carry_on": {
+          "title": "Carry-on baggage restrictions",
+          "text": "The following items are only allowed in checked baggage:",
+          "list": [
+            "Liquids over 100 ml",
+            "Sharp objects (knives, scissors over 10 cm)",
+            "Sports equipment (baseball bats, clubs)",
+            "Tools longer than 18 cm",
+            "Firearms and ammunition (subject to requirements)"
+          ]
+        }
+      },
+    "CheckIn": {
+      "title": "Check-in Information",
+      "description": "Learn about check-in options, timing, and requirements for your flight",
+      "tabs": {
+        "online": "Online Check-in",
+        "airport": "Airport Check-in",
+        "special": "Special Assistance"
+      },
+      "online": {
+        "title": "Online Check-in",
+        "desc": "The fastest and most convenient way to check in for your flight",
+        "whenTitle": "When Can I Check In Online?",
+        "whenText": "Online check-in opens 24 hours before scheduled departure and closes 1 hour before departure.",
+        "processTitle": "Online Check-in Process",
+        "steps": {
+          "1": { "title": "Find Your Booking", "desc": "Enter your booking reference and last name" },
+          "2": { "title": "Select Seats", "desc": "Choose or confirm your seat assignment" },
+          "3": { "title": "Add Baggage", "desc": "Add extra baggage if needed" },
+          "4": { "title": "Complete Check-in", "desc": "Review details and confirm" },
+          "5": { "title": "Get Boarding Pass", "desc": "Download, print, or save to your mobile device" }
+        },
+        "optionsTitle": "Check-in Options",
+        "options": {
+          "web": {
+            "title": "Web Check-in",
+            "desc": "Check in through our website from any device with internet access.",
+            "steps": {
+              "1": "Navigate to \"Manage Booking\" section",
+              "2": "Enter your booking reference and last name",
+              "3": "Follow the steps to complete check-in"
+            }
+          },
+          "app": {
+            "title": "Mobile App Check-in",
+            "desc": "Check in through our mobile app for the most seamless experience.",
+            "steps": {
+              "1": "Download our app from App Store or Google Play",
+              "2": "Log in or access your booking",
+              "3": "Tap on \"Check-in\" and follow instructions",
+              "4": "Save boarding pass directly to your phone"
+            }
+          }
+        },
+        "alert": {
+          "title": "Benefits of Online Check-in",
+          "items": {
+            "1": "Skip the check-in counter lines at the airport",
+            "2": "Select your preferred seat in advance",
+            "3": "Add baggage without waiting in line",
+            "4": "Save time at the airport - just drop your bags if needed"
+          }
+        }
+      },
+      "airport": {
+        "title": "Airport Check-in",
+        "desc": "Traditional check-in at airport counters and self-service kiosks",
+        "whenTitle": "When Should I Arrive?",
+        "when": {
+          "domestic": "Domestic flights: At least 90 minutes before departure",
+          "international": "International flights: At least 3 hours before departure"
+        },
+        "optionsTitle": "Airport Check-in Options",
+        "counter": {
+          "title": "Counter Check-in",
+          "desc": "Visit our check-in counters where our staff will assist you:",
+          "steps": {
+            "1": "Present your booking reference or e-ticket",
+            "2": "Show valid identification (passport for international flights)",
+            "3": "Check your baggage",
+            "4": "Receive your printed boarding pass"
+          }
+        },
+        "kiosk": {
+          "title": "Self-Service Kiosks",
+          "desc": "Use our self-service kiosks for a faster experience:",
+          "steps": {
+            "1": "Scan your booking QR code or enter booking details",
+            "2": "Select or change your seat",
+            "3": "Print your boarding pass and baggage tags",
+            "4": "Drop your tagged bags at the bag drop counter"
+          }
+        },
+        "docsTitle": "Required Documents",
+        "docs": {
+          "domestic": {
+            "title": "Domestic Flights",
+            "items": {
+              "1": "Valid government-issued photo ID",
+              "2": "Booking reference or e-ticket"
+            }
+          },
+          "international": {
+            "title": "International Flights",
+            "items": {
+              "1": "Valid passport (valid for at least 6 months beyond your travel date)",
+              "2": "Visa or travel authorization (if required)",
+              "3": "Booking reference or e-ticket",
+              "4": "Any required health documentation"
+            }
+          }
+        },
+        "alert": {
+          "title": "Important Check-in Deadlines",
+          "desc": {
+            "1": "Check-in counters close:",
+            "items": {
+              "1": "45 minutes before departure for domestic flights",
+              "2": "60 minutes before departure for international flights"
+            },
+            "2": "Arriving after these deadlines may result in denied boarding."
+          }
+        }
+      },
+      "special": {
+        "title": "Special Assistance",
+        "desc": "Information for passengers requiring special assistance during check-in and travel",
+        "alert": {
+          "title": "Request in Advance",
+          "desc": "Please request any special assistance at least 48 hours before your flight for optimal service. You can add special assistance to your booking online or by contacting our customer service."
+        },
+        "types": {
+          "title": "Types of Special Assistance",
+          "desc": "Download, print, or save to your mobile device",
+          "mobility": {
+            "title": "Mobility Assistance",
+            "desc": "For passengers with reduced mobility:",
+            "items": {
+              "1": "Wheelchair service throughout the airport",
+              "2": "Assistance boarding and disembarking the aircraft",
+              "3": "Special seating arrangements",
+              "4": "Transport of mobility devices"
+            }
+          },
+          "medical": {
+            "title": "Medical Requirements",
+            "desc": "For passengers with medical needs:",
+            "items": {
+              "1": "Accommodation for medical equipment",
+              "2": "Special meal requirements",
+              "3": "Oxygen requirements (doctor's certificate required)",
+              "4": "Support for medical conditions"
+            }
+          },
+          "children": {
+            "title": "Traveling with Children",
+            "desc": "Special services for families:",
+            "items": {
+              "1": "Priority boarding for families with young children",
+              "2": "Bassinet requests for infants",
+              "3": "Assistance for unaccompanied minors"
+            }
+          },
+          "animals": {
+            "title": "Service Animals",
+            "desc": "Guidelines for traveling with service animals:",
+            "items": {
+              "1": "Service dogs are allowed in the cabin free of charge",
+              "2": "Documentation requirements vary by destination",
+              "3": "Pre-notification is required"
+            }
+          }
+        },
+        "processTitle": "Check-in Process for Special Assistance",
+        "process": {
+          "desc": "When checking in with special assistance needs:",
+          "steps": {
+            "1": "Arrive at the airport at least 30 minutes earlier than the recommended time",
+            "2": "Proceed to the dedicated Special Assistance counter or inform a staff member at the regular check-in counter",
+            "3": "Present your booking confirmation with the pre-requested assistance",
+            "4": "Our staff will guide you through the check-in process and arrange for the requested assistance",
+            "5": "For wheelchair assistance, you'll be escorted through security and to your gate"
+          }
+        },
+        "contact": {
+          "title": "Contact Information",
+          "desc": "For questions or to arrange special assistance:",
+          "phone": "Phone: +1-800-555-1234",
+          "email": "Email: special.assistance@skyjet.com",
+          "online": "Online: Login to your booking and select \"Manage Special Requests\""
+        }
+      }
+    },
+    "LoginPage": {
+    "title": "Login",
+    "description": "Sign in to your account to access your bookings",
+    "form": {
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "password": "Password",
+      "login": "Login",
+      "loggingIn": "Logging in..."
+    },
+    "footer": {
+      "prompt": "Don't have an account?",
+      "link": "Register"
+    },
+    "errors": {
+      "required": "Email and password are required",
+      "default": "Login failed"
+    }
+   
+  }
+  },
+  "Home": {
+    "title": "Explore the World with SkyJet",
+    "description": "Find and book flights to hundreds of destinations worldwide at the best prices"
+  },
+  "flightSearch":{
+    "title": "Flight Search",
+    "cardTitle": "Find Flights",
+    "cardDescription": "Discover the best options for your trip",
+    "departureAirportLabel": "Departure Airport",
+    "arrivalAirportLabel": "Arrival Airport",
+    "selectDepartureAirport": "Select departure airport",
+    "selectArrivalAirport": "Select arrival airport",
+    "searchAirportsPlaceholder": "Search airports...",
+    "noAirportsFound": "No airports found.",
+    "clearSelection": "Clear selection",
+    "dateSelectionLabel": "Date Selection",
+    "selectDate": "Select date",
+    "priceRange": "Price Range:",
+    "airlineLabel": "Airline",
+    "anyAirline": "Any Airline",
+    "searchButton": "Find Flights",
+    "errorSearching": "An error occurred while searching for flights",
+    "selectFlight": "Select Flight",
+    "searchResults": "Results",
+    "duration": "Duration",
+    "useSearchForm": ""
+  }
+  
+}
+
+  
+  
+  
+

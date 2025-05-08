@@ -1,0 +1,17 @@
+{
+  
+      "errors": {
+        "not_found": "Ticket not found",
+        "booking_not_found": "Booking not found"
+      },
+      "pdf": {
+        "title": "Flight Ticket",
+        "passenger_name": "Name",
+        "passenger_email": "Email",
+        "flight_number": "Flight",
+        "seat_number": "Seat",
+        "booking_ref": "Booking Reference",
+        "issued_at": "Issued At"
+      }
+    
+  }
